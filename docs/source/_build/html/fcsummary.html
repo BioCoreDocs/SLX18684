@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Feature Counts Summary &#8212; SLX-18684 1 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Percentages of Zero Feature Counts" href="fcplot.html" />
+    <link rel="prev" title="Feature Counts Reverse Strands Log" href="fc.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          SLX-18684</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="fastqscreen.html"><strong>Multigenomes Mapping Plots</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="trimming.html"><strong>Trimming Plots</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="star.html"><strong>Mapping Stats</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="fc.html"><strong>Feature Counts Reverse Strands Log</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>Feature Counts Summary</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="fcplot.html"><strong>Percentages of Zero Feature Counts</strong></a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#"><strong>Feature Counts Summary</strong></a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="fc.html" title="Previous Chapter: Feature Counts Reverse Strands Log"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Feature Count...</span>
+    </a>
+  </li>
+  <li>
+    <a href="fcplot.html" title="Next Chapter: Percentages of Zero Feature Counts"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">Percentages o... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/fcsummary.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="feature-counts-summary">
+<h1><strong>Feature Counts Summary</strong><a class="headerlink" href="#feature-counts-summary" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D701rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1874044</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1849599</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4327166</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">28505</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D701rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2704886</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2632005</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">6805109</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">40579</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D701rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3374671</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3259818</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">6832520</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">58593</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D701rna_D505rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1178956</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1298313</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">2641840</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">41015</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D701rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3186628</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">6575179</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7896899</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">1014266</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D701rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1771286</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3023800</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">5079047</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">370788</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D701rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2389065</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4763651</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4702103</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">1062126</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D702rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2353324</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2325992</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">5673546</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">34671</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D702rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4105808</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4518970</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">9285377</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">63294</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D702rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4342943</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4087748</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">10595261</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">75233</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D702rna_D505rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1466817</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1513636</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3369236</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">23524</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D702rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1842751</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2849739</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4542926</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">105727</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D702rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2642042</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2076730</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">6589339</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">47746</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D702rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1779785</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3090748</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3350463</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">785250</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D703rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4062645</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4556520</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">8440015</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">69400</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D703rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1838643</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2179030</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4435235</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">28454</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D703rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4071616</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4644761</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">9143456</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">61794</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D703rna_D505rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1533338</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1496120</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3777821</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">26833</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D703rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3223133</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2810751</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7684415</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">90499</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D703rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1474960</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1444692</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3820573</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">68951</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D703rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2528153</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4714905</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4726446</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">915114</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D704rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2463480</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2751382</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">5633384</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">40713</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D704rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3507526</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2978108</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">9360955</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">54005</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D704rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3234819</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3788300</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7325344</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">50318</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D704rna_D505rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1205543</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1277539</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">2845548</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">24843</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D704rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">6416143</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">13643811</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">18141801</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">1751271</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D704rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3485057</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3736550</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">9603065</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">136072</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D704rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1906719</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4390038</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4388770</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">782363</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D705rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3570041</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4482756</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7798938</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">56764</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D705rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3491260</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3674507</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">8767861</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">55434</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D705rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2881554</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3387753</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">6346700</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">47081</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D705rna_D505rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1410733</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1233746</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3574282</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">46248</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D705rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2346121</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2134044</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">5755885</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">59088</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D705rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1680007</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3935776</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4261250</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">647620</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D705rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3049391</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">5714485</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7963946</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">789832</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D706rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2597749</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2853120</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">6331403</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">43083</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D706rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4369019</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4309244</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">10459853</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">102572</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D706rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3410835</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3942194</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7585494</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">53337</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D706rna_D505rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1622069</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1258425</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3615705</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">68464</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D706rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4046834</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">5811485</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">10535405</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">427024</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D706rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1922661</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2699814</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3901534</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">33299</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D706rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1634667</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3357227</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4489849</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">379664</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D707rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3434401</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3313054</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7900399</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">56092</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D707rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1859951</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1588011</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">5076129</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">32169</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D707rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">5913505</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">6943593</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">13486772</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">92850</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D707rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">5761722</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">5250078</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">13094450</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">80025</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D707rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2638941</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2600841</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7192114</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">40772</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D707rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">921176</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1609729</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">2188744</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">278632</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D708rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3794301</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2453866</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">9422386</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">62233</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D708rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2607953</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2889359</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">6044938</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">42442</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D708rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4958933</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4392752</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">12767303</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">75202</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D708rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4108009</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3347407</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">9441702</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">71743</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D708rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1459168</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1963262</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3178213</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">23485</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D708rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2397382</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4445875</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">5330812</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">796107</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D709rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2251432</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1843046</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">5657857</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">39144</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D709rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4714202</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4853603</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">11647172</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">76496</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D709rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4963055</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">5156681</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">12371285</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">72996</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D709rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3245015</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2686893</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">8572627</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">62905</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D709rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3014119</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3003972</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7325258</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">46660</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D709rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3215824</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3304508</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7210775</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">70247</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D710rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3904503</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3660989</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">10186781</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">62209</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D710rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4852205</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">5704441</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">10867951</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">77927</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D710rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4880339</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">5136535</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">11082812</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">86520</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D710rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1198183</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1016079</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">2972955</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">20099</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D710rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3687599</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3815835</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">9260395</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">59330</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D710rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3019530</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2777622</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">8125540</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">84911</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D711rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2470641</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2333103</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">6200988</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">37766</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D711rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2474906</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">2394565</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">6228163</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">42702</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D711rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">827299</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">953254</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">1909734</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">23838</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D711rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4085221</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3860110</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">10378188</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">66820</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D711rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1991540</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1607729</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4683793</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">74079</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D711rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1634686</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1941384</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">3521193</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">31464</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D712rna_D501rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3570496</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4614566</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7861693</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">53583</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D712rna_D502rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3271893</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3383619</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7858647</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">53699</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D712rna_D503rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">4549898</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3971309</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">11606130</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">62766</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D712rna_D506rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">3138776</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">4916682</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7010252</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">934684</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D712rna_D507rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">1839640</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">1878742</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">4206430</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">78884</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Status</span>	<span class="n">SLX</span><span class="o">-</span><span class="mf">18684.</span><span class="n">D712rna_D508rna</span><span class="o">.</span><span class="n">HKMGVDRXX</span><span class="o">.</span><span class="n">s_2</span><span class="o">.</span><span class="n">Star_Aligned</span><span class="o">.</span><span class="n">sortedByCoord</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">bam</span>
+<span class="n">Assigned</span>	<span class="mi">2725748</span>
+<span class="n">Unassigned_Unmapped</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MappingQuality</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Chimera</span>	<span class="mi">0</span>
+<span class="n">Unassigned_FragmentLength</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Duplicate</span>	<span class="mi">0</span>
+<span class="n">Unassigned_MultiMapping</span>	<span class="mi">3330444</span>
+<span class="n">Unassigned_Secondary</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Nonjunction</span>	<span class="mi">0</span>
+<span class="n">Unassigned_NoFeatures</span>	<span class="mi">7769889</span>
+<span class="n">Unassigned_Overlapping_Length</span>	<span class="mi">0</span>
+<span class="n">Unassigned_Ambiguity</span>	<span class="mi">235487</span>
+</pre></div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2020, Bio2Core Facility.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
