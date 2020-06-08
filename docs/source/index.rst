@@ -14,4 +14,5 @@ Authors: Bio2Core Facility
    star.rst
    fc.rst
    fcsummary.rst 
-   fcplot.rst  
+   fcplot.rst 
+   picard.rst 
